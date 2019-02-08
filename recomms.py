@@ -132,7 +132,7 @@ def get_recommendations(mov1,mov2,mov3,getrating1,getrating2,getrating3):
 
 	# filter movies from users 
 	filtered = df_pred.loc[df_pred['user_rating'].isnull()]
-	filtered = filtered[filtered.columns[1:8]]
+	filtered = filtered[filtered.columns[1:10]]
 	filtered = filtered.sort_values(by=['calc_rating','rating'], ascending=False)
 
 	#Top 5 per genre
@@ -140,7 +140,7 @@ def get_recommendations(mov1,mov2,mov3,getrating1,getrating2,getrating3):
 	drama = filtered.loc[(filtered['genres'].str.contains('Drama')) & (filtered['rating_cnt']>50)].head(3)
 	action = filtered.loc[(filtered['genres'].str.contains('Action')) & (filtered['rating_cnt']>50)].head(3)
 	
-	return comedies['title'],drama['title'],action['title']
+	return comedies['title'],drama['title'],action['title'],comedies['tmdb_Id'],drama['tmdb_Id'],action['tmdb_Id']
 	
 	"""
 	comedies[['title','rating','calc_rating']]

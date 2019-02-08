@@ -7,7 +7,7 @@ from fuzzywuzzy import process
 ############################
 # set up SQLite DB
 ############################
-db =sqlite3.connect('movies2.db')
+db =sqlite3.connect('MoviesData.db')
 cur = db.cursor()
 db
 
