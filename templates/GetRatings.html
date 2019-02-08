@@ -1,0 +1,33 @@
+
+<h2> In the next step please rate your movies </h2>
+
+<p>
+
+<ul>
+	Thanks! I matched your movies:<b>  {{input[0]}}, {{input[1]}}, {{input[2]}}</b> 	with these movies from the database. <br>
+	Please rate them now from 0-5 : <p>
+
+<form action="/result" method="GET">
+<table border="0" >
+<tbody>
+        <tr>
+			<td>{{cleanmovie1}}</td>
+			<td>
+		<input name="rating1" type="text" /><br></td>
+		</tr>
+        <tr>
+			<td>{{cleanmovie2}}</td>
+			<td><input name="rating2" type="text" /></td>
+		</tr>
+        <tr>
+			<td>{{cleanmovie3}}</td>
+			<td><input name="rating3" type="text" /></td>
+		</tr>
+    </tbody>
+</table>
+<input type="submit" value="submit ratings" /></form>
+
+</ul>
+
+
+<a href="/">Go back</a>
